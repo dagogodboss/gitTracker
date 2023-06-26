@@ -112,7 +112,7 @@
 <details><summary class="section-title">Sample Series of Requests</summary>
 
 <div class="collapsable-details">
-<p>Requests are received in the following order and are provided in the test file <em>http00.json</em>:</p>
+<p>Please check the series of requests below:</p>
 
 <details><summary class="section-title">POST <code>/events</code></summary>
 
