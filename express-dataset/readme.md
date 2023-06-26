@@ -88,7 +88,23 @@
 
 <p>&nbsp;</p>
 
-<p>You should complete the given incomplete project so that it passes all the test cases when running the provided unit tests. The project by default supports the use of SQLite3 database.</p>
+<h3 style="margin-bottom: 1rem;"><b>Instructions</b></h3>
+
+<p>- You are required to complete the given incomplete project so that it passes all description of the project</p>
+
+<p>- You are required write UNIT Test cases for the project</p>
+
+<p>- You are required to implement using the technologies below</p>
+
+<ul>
+	<li>Node.js</li>
+	<li>Typescript</li>
+	<li>Database: MongoDB or PostgreSQL</li>
+</ul>
+
+<p>- You are required to write API documentation and provide the link in your submission.</p>
+
+<p>- For your submission, please create a "PUBLIC" repository with proper description on how to run the project and share the link to the repository.</p>
 
 <p>&nbsp;</p>
 
