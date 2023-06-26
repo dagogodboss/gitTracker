@@ -2,4 +2,5 @@ promise-area/me.index.js
 image-matching/me.index.js
 github-dataset/node-js-express
 .idea
-test
+test.txt
+*/.txt
