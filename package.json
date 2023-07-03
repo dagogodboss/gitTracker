@@ -18,8 +18,7 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
-    "test": "jest",
-    "docs": "docify src"
+    "test": "jest"
   },
   "keywords": [],
   "dependencies": {
