@@ -1,6 +1,22 @@
-promise-area/me.index.js
-image-matching/me.index.js
-github-dataset/node-js-express
-.idea
-test.txt
-*/.txt
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+
+# dotenv environment variable files
+.env
