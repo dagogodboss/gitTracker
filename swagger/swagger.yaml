@@ -1,0 +1,142 @@
+openapi: 3.0.0
+info:
+  title: Git Tracker
+  version: 1.0.0
+paths:
+  /actors:
+    post:
+      summary: Create an actor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActorDto'
+      responses:
+        '200':
+          description: Actor created successfully
+    get:
+      summary: Get all actors ordered by total events
+      responses:
+        '200':
+          description: OK
+  /actors/get-actors:
+    get:
+      summary: Get all actors
+      responses:
+        '200':
+          description: OK
+  /actors/streak:
+    get:
+      summary: Get actor streak
+      responses:
+        '200':
+          description: OK
+  /actors/{id}:
+    get:
+      summary: Get actor by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+    put:
+      summary: Update an actor
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActorDto'
+      responses:
+        '200':
+          description: Actor updated successfully
+    delete:
+      summary: Delete an actor
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Actor deleted successfully
+  /events:
+    post:
+      summary: Create an event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventDto'
+      responses:
+        '200':
+          description: Event created successfully
+    get:
+      summary: Get all events
+      responses:
+        '200':
+          description: OK
+  /events/actors/{actorID}:
+    get:
+      summary: Get events by actor ID
+      parameters:
+        - name: actorID
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /events/erase:
+    delete:
+      summary: Erase all events
+      responses:
+        '200':
+          description: Events erased successfully
+components:
+  schemas:
+    ActorDto:
+      type: object
+      properties:
+        id:
+          type: number
+        login:
+          type: string
+        avatar_url:
+          type: string
+          format: url
+    EventDto:
+      type: object
+      properties:
+        id:
+          type: number
+        type:
+          type: string
+        actor:
+          $ref: '#/components/schemas/ActorDto'
+        repo:
+          $ref: '#/components/schemas/RepoDto'
+    RepoDto:
+      type: object
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        url:
+          type: string
+          format: url
